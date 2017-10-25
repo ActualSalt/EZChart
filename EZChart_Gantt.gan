@@ -45,7 +45,6 @@ Roles not established]]></notes>
 
 Workload distribution ]]></notes>
         </task>
-        <task id="4" name="task_4" meeting="false" start="2017-10-16" duration="1" complete="0" expand="true"/>
     </tasks>
     <resources>
         <resource id="0" name="Min Young Lee" function="Default:1" contacts="" phone=""/>
