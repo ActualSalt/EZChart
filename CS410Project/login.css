@@ -15,8 +15,10 @@ input[type=text], input[type=password] {
 
 #Title {
   text-align: center;
-  color: red
-}
+  color: #41bdc5;
+  font-size: 32px;
+  font-style: italic;
+} 
 
 
 /* Set a style for all buttons */
@@ -28,13 +30,19 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
+    border-radius: 8px;
 }
 
 /* Add a hover effect for buttons */
 button:hover {
     opacity: 0.8;
 }
-
+/* Style for logo */
+.logocontainer {
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
 /* Extra style for the cancel button (red) */
 .cancelbtn {
     width: auto;
