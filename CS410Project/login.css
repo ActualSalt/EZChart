@@ -50,7 +50,9 @@ button:hover {
 
 /* Avatar image */
 img.banner {
-    width: 40%;
+    /*width: 40%;*/
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
 }
 
