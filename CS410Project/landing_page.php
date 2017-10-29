@@ -20,15 +20,8 @@
 		
 		<main>
 			<form>
-				<select name="patient">
-					<?php foreach($patients as $patient)
-					{ ?>
-						<option value="<?php $patient ?>"><?php print $patient ?></option><?php ;
-					} ?>
-				</select>
 				<button type="submit" name="newPatient" formaction="newpatient.php">Add New Patient</button>
-				<button type="submit" name="newEntry" formaction="newentry.php">New Entry</button>
-				<button type="submit" name="viewEntry" formaction="viewentry.php">View Entry</button>
+				<button type="submit" name="newEntry" formaction="patient.php">Add/View Entry</button>
 			</form>
 		</main>
 	</body>
