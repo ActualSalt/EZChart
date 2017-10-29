@@ -18,15 +18,15 @@ CREATE TABLE `EZChart`.`Temp_form` (
 /*Create employee table*/
 CREATE TABLE `EZChart`.`Employee` (
   `EmployeeID` VARCHAR(10) NOT NULL,
-  `Password` VARCHAR(10) NOT NULL,
+  `Password` VARCHAR(20) NOT NULL,
   `Title` VARCHAR(45) NOT NULL,
   `Name` VARCHAR(45) NULL,
   PRIMARY KEY (`EmployeeID`));
   
   /*Popluate employee table with three different titles */
-  INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Title`, `Name`) VALUES ('c0000', 'doc', 'John');
-INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Title`, `Name`) VALUES ('c0001', 'nur', 'Juan');
-INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Title`, `Name`) VALUES ('c0002', 'cna', 'Tue');
+  INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Title`, `Name`) VALUES ('c0000', 'doc', 'John', 'password');
+INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Title`, `Name`) VALUES ('c0001', 'nur', 'Juan', 'password');
+INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Title`, `Name`) VALUES ('c0002', 'cna', 'Tue', 'password');
 
 /*View the table */
 SELECT * FROM EZChart.Temp_form;
