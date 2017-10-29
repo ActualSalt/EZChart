@@ -18,6 +18,7 @@ CREATE TABLE `EZChart`.`Temp_form` (
 /*Create employee table*/
 CREATE TABLE `EZChart`.`Employee` (
   `EmployeeID` VARCHAR(10) NOT NULL,
+  `Password` VARCHAR(10) NOT NULL,
   `Title` VARCHAR(45) NOT NULL,
   `Name` VARCHAR(45) NULL,
   PRIMARY KEY (`EmployeeID`));
