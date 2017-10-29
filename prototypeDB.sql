@@ -24,9 +24,9 @@ CREATE TABLE `EZChart`.`Employee` (
   PRIMARY KEY (`EmployeeID`));
   
   /*Popluate employee table with three different titles */
-  INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Title`, `Name`) VALUES ('c0000', 'doc', 'John', 'password');
-INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Title`, `Name`) VALUES ('c0001', 'nur', 'Juan', 'password');
-INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Title`, `Name`) VALUES ('c0002', 'cna', 'Tue', 'password');
+INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Password`, `Title`, `Name`) VALUES ('c0000', 'doctor', 'doc', 'Cero');
+INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Password`, `Title`, `Name`) VALUES ('c0001', 'nurse', 'nur', 'Juan');
+INSERT INTO `EZChart`.`Employee` (`EmployeeID`, `Password`, `Title`) VALUES ('c0002', 'cna', 'cna');
 
 /*View the table */
 SELECT * FROM EZChart.Temp_form;
