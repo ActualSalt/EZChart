@@ -1,9 +1,13 @@
 <?php
-	$db = new PDO("mysql:dbname=ez_chart", "root");
-	$username = $_GET["username"];
-	$result = $db->prepare("SELECT * FROM user WHERE user_type = $username");
-	$patients = array("Billy");  //Demo code needs to be replaced from database
-?>
+    try {
+        $db = new PDO("mysql:dbname=EZChart", "root", "");
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $rows = $db->query("SELECT * FROM Employee");
+    } catch (PDOException $ex) {
+    ?>
+        <p>Sorry, a database error occurred. Please try again later.</p>
+        <p>(Error details: <?= $ex->getMessage() ?>)</p>
+  <?php } ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +19,7 @@
 	</head>
 	<body>
 		<header>
-			<h1>Welcome:  <?php print $username ?></h1>
+			<h1>Welcome:  <?php echo $_POST["username"]; ?></h1>
 		</header>
 		
 		<main>
