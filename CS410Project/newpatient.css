@@ -1,0 +1,41 @@
+
+
+input[type=text] {
+    width: 156px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#ChartEntererID{
+	width: 124px;
+	padding: 5px 0px;
+}
+#PatientAttributes {
+	width: 42px;
+	padding: 5px 0px;
+}
+
+#PatientID {
+	width: 124px;
+	padding: 5px 0px;
+}
+#PatientIDDOB {
+	width: 72px;
+	padding: 5px 0px;
+
+}
+#Submit {
+	 background-color: #4CAF50;
+    color: white;
+    padding: 14px 0px;
+    margin: 8px 5px;
+    border: none;
+    cursor: pointer;
+    width: 64px;
+    border-radius: 8px;
+}
+#Submit:hover {
+	opacity: 0.8;
+}
