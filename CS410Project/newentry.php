@@ -7,7 +7,7 @@
 	<head>
 		<title>New Entry</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="login.css">
+		<link rel="stylesheet" href="newpatient.css">
 		<script src=".js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -16,24 +16,25 @@
 		</header>
 		
 		<main>
+			<div id="PatientInfoForm" class="container">
 			<form>
 				<fieldset>
 					<legend>Patient info:</legend>
-					First name: <input type="text" name="fname"><br>
-					Last name: <input type="text" name="lname"><br>
-					Date of birth: <input type="text"><br>
-					Gender:  
+					First name: <input type="text" id="PatientID" name="fname"><br>
+					Last name: <input type="text" id="PatientID" name="lname"><br>
+					Date of Birth: <input type="text" placeholder="mm/dd/yyyy" maxlength="10" id="PatientIDDOB"><br>
+					Sex:  
 					<select name="patient">
 						<option value="male">Male</option>
 						<option value="female">Female</option>
 						<option value="other">Other</option>
 					</select>
-					Age: <input type="number" name="age"><br><br>
-					Height: <input type="text" name="height">
-					Weight: <input type="text" name="weight">
-					Blood Pressure: <input type="text" name="bp">
-					<textarea rows="4" cols="50" name="behaviors">Enter behaviors here</textarea>
-					<textarea rows="4" cols="50" name="comments">Additional comments</textarea>
+					Age: <input type="number" id="PatientAttributes" min="0" max="125" name="age"><br><br>
+					Height (in): <input type="number" id="PatientAttributes" name="height">
+					Weight (lbs): <input type="number" id="PatientAttributes" name="weight"><br>
+					Blood Pressure: <input type="text" id="PatientAttributes" name="bp">
+					<textarea rows="4" cols="50" placeholder="Enter behaviors here." name="behaviors"></textarea>
+					<textarea rows="4" cols="50" placeholder="Additional Comments." name="comments"></textarea>
 				</fieldset>
 				
 				<fieldset>
@@ -44,11 +45,12 @@
 						<option value="rn">RN</option>
 						<option value="dr">Dr.</option>
 					</select><br><br>
-					First name: <input type="text" name="fname"><br>
-					Last name: <input type="text" name="lname"><br>
+					First name: <input type="text" id="ChartEntererID" name="fname"><br>
+					Last name: <input type="text" id="ChartEntererID" name="lname"><br>
 				</fieldset><br>
-				<input type="submit" value="Submit">
+				<input type="submit" id="Submit" value="Submit">
 			</form>
+			</div>
 		</main>
 	</body>
 </html>

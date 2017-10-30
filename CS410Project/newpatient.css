@@ -22,7 +22,7 @@ input[type=text] {
 	padding: 5px 0px;
 }
 #PatientIDDOB {
-	width: 72px;
+	width: 88px;
 	padding: 5px 0px;
 
 }
@@ -38,4 +38,10 @@ input[type=text] {
 }
 #Submit:hover {
 	opacity: 0.8;
+}
+.container {
+    width: 500px;
+}
+textarea {
+    resize: none;
 }
