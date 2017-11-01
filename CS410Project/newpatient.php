@@ -20,9 +20,9 @@
 			<form method="post" action="new_patient_added.php">
 				<fieldset>
 					<legend>Patient info:</legend>
-					First name: <input type="text" id="PatientID" name="fname"><br>
-					Last name: <input type="text" id="PatientID" name="lname"><br>
-					Date of Birth: <input type="text" placeholder="yyyy/mm/dd" maxlength="10" id="PatientIDDOB name="birthday"><br>
+					First name: <input type="text" id="PatientID" name="first_name"><br>
+					Last name: <input type="text" id="PatientID" name="last_name"><br>
+					Date of Birth: <input type="text" placeholder="yyyy/mm/dd" maxlength="10" id="PatientIDDOB" name="birthday"><br>
 					Sex:  
 					<select name="sex">
 						<option value="male">Male</option>
