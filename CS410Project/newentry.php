@@ -22,7 +22,7 @@
 					<legend>Patient info:</legend>
 					First name: <input type="text" id="PatientID" name="fname"><br>
 					Last name: <input type="text" id="PatientID" name="lname"><br>
-					Date of Birth: <input type="text" placeholder="mm/dd/yyyy" maxlength="10" id="PatientIDDOB"><br>
+					Date of Birth: <input type="text" placeholder="mm/dd/yyyy" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" maxlength="10" id="PatientIDDOB"><br>
 					Sex:  
 					<select name="patient">
 						<option value="male">Male</option>

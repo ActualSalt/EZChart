@@ -1,33 +1,35 @@
 
 
 input[type=text] {
-    width: 156px;
-    padding: 12px 20px;
+
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    box-sizing: border-box;
 }
-#ChartEntererID{
+
+.chartEntererID{
 	width: 124px;
 	padding: 5px 0px;
 }
-#PatientAttributes {
+.patientAttributes {
 	width: 42px;
-	padding: 5px 0px;
+	padding: 2px 0px;
 }
 
-#PatientID {
+.patientID {
 	width: 124px;
 	padding: 5px 0px;
 }
-#PatientIDDOB {
-	width: 88px;
+.patientIDDOBSSN {
+	width: 72px;
 	padding: 5px 0px;
 
+}
+.phoneInfo {
+    width: 100px;
 }
 #Submit {
-	 background-color: #4CAF50;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 0px;
     margin: 8px 5px;
