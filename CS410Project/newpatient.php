@@ -17,21 +17,23 @@
 		
 		<main>
 			<div id="PatientNewInfoForm" class="container">
-			<form>
+			<form method="post" action="new_patient_added.php">
 				<fieldset>
 					<legend>Patient info:</legend>
 					First name: <input type="text" id="PatientID" name="fname"><br>
 					Last name: <input type="text" id="PatientID" name="lname"><br>
-					Date of Birth: <input type="text" placeholder="mm/dd/yyyy" maxlength="10" id="PatientIDDOB"><br>
+					Date of Birth: <input type="text" placeholder="yyyy/mm/dd" maxlength="10" id="PatientIDDOB name="birthday"><br>
 					Sex:  
-					<select name="patient">
+					<select name="sex">
 						<option value="male">Male</option>
 						<option value="female">Female</option>
 						<option value="other">Other</option>
 					</select>
-					Age: <input type="number" id="PatientAttributes" min="0" max="125" name="age"><br><br>
 					Height (in): <input type="number" id="PatientAttributes" name="height">
 					Weight (lbs): <input type="number" id="PatientAttributes" name="weight">
+					<textarea rows="1" cols="50" name="dnr_status">DNR Status</textarea>
+					<textarea rows="20" cols="50" name="notes">Admission Notes</textarea>
+					<!-- need to add area to upload patient picture-->
 				</fieldset>
 				
 				<fieldset>
