@@ -25,9 +25,9 @@
 					Date of Birth: <input type="text" placeholder="yyyy/mm/dd" maxlength="10" id="PatientIDDOB" name="birthday"><br>
 					Sex:  
 					<select name="sex">
-						<option value="male">Male</option>
-						<option value="female">Female</option>
-						<option value="other">Other</option>
+						<option value="m">Male</option>
+						<option value="f">Female</option>
+						<option value="i">Other</option>
 					</select>
 					Height (in): <input type="number" id="PatientAttributes" name="height">
 					Weight (lbs): <input type="number" id="PatientAttributes" name="weight">
