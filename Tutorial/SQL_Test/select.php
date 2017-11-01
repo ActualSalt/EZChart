@@ -4,8 +4,7 @@ $servername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
 $dbname = "test";
-//User input 
-$data = $_POST['data'];
+
 //Connection
 $con = mysqli_connect($servername, $dbusername, $dbpassword);
 
@@ -19,13 +18,15 @@ if(!mysqli_select_db($con, $dbname)){
 }
 
 //SQL query 
-$sql = "INSERT INTO TestTable (TestInput) VALUES ('$data')";
-//Did the insertion happen?
-if(!mysqli_query($con,$sql)){
-	echo 'Not inserted';
-}else{
-	echo 'Inserted';
+$sql = "SELECT * FROM TestTable";
+$result = $con->query($sql);
+
+while($row = $result->fetch_assoc()) {
+	echo $row["TestInput"]."<br>";
+}else {
+    echo "0 results";
 }
+
 //close
 $con->close();
 ?>
