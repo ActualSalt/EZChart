@@ -1,15 +1,15 @@
 <?php
-	$dbc = mysqli_connect('localhost', 'data_base_user_name', 'data_base_password', 'EZChart') or die('Error connecting to MySQL server.');
-	$username = $_GET["username"];
+	//$dbc = mysqli_connect('localhost', 'data_base_user_name', 'data_base_password', 'EZChart') or die('Error connecting to MySQL server.');
+	//$username = $_GET["username"];
 	//$result = $db->prepare("SELECT * FROM user WHERE user_type = $username");
-	$patients = array("Billy");  //Demo code needs to be replaced from database
+	//$patients = array("Billy");  //Demo code needs to be replaced from database
 
 
 	//this is only to see if I'm connecting to the db
-	$query = "Insert INTO employee (EmployeeID, Password, Title, Name) VALUES ('0004', '34d832', 'CNA', 'Amy')";
-	$result = mysqli_query($dbc, $query) or die('Error querying database.');
+	//$query = "Insert INTO employee (EmployeeID, Password, Title, Name) VALUES ('0004', '34d832', 'CNA', 'Amy')";
+	//$result = mysqli_query($dbc, $query) or die('Error querying database.');
 
-	mysqli_close($dbc);
+	//mysqli_close($dbc);
 
 ?>
 

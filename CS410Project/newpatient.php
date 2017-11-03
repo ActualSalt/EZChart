@@ -20,6 +20,7 @@
 			<form>
 				<fieldset>
 					<legend>Patient info:</legend>
+					<img id="patientphoto" src="No_picture_available.png" alt="No picture available">
 					First name: <input type="text" class="patientID" name="fname"><br>
 					Last name: <input type="text" class="patientID" name="lname"><br>
 					Date of Birth: <input type="text" placeholder="mm/dd/yyyy" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" maxlength="10" class="patientIDDOBSSN"><br>
@@ -31,6 +32,13 @@
 					</select>
 					Age: <input type="number" class="patientAttributes" min="0" max="125" name="age"><br>
 					<br>
+					
+					Height (in): <input type="number" class="patientAttributes" name="height">
+
+					Weight (lbs): <input type="number" class="patientAttributes" name="weight">
+					
+					<br><br>
+					
 					Marital Status: 
 					<select name="patient">
 						<option value="Married">Married</option>
@@ -38,26 +46,26 @@
 						<option value="Divorced">Divorced</option>
 						<option value="Widowed">Widowed</option>
 						<option value="Other">Other</option>
-					</select> <br>
+					</select> <br><br>
 
-					SSN: <input type="text" placeholder="#########" class="patientIDDOBSSN" pattern="\d\d\d\d\d\d\d\d\d" maxlength="9" name="ssn"> <br>
+					SSN: <input type="password" placeholder="#########" class="patientIDDOBSSN" pattern="\d\d\d\d\d\d\d\d\d" maxlength="9" name="ssn"> <br>
 
-					Address: <input type="text" placeholder="" class="patientID" name="address"> <br>
-
+					Room Number: <input type="text" placeholder="" class="patientID" name="address"> <br>
+					
+					<!--
 					Home Phone: <input type="text" placeholder="###-###-####" class="phoneInfo" pattern="\d\d\d-\d\d\d-\d\d\d\d" maxlength="12" name="home_phone"> <br>
 
 					Work Phone: <input type="text" placeholder="###-###-####" class="phoneInfo" pattern="\d\d\d-\d\d\d-\d\d\d\d" maxlength="12" name="work_phone"> <br>
 
 					Employer: <input type="text" placeholder="" class="patientID" name="employer"> <br>
-
+					-->
 					
-
-					Provider: <input type="text" placeholder="" class="patientID" name="provider"> <br>
+					Insurance: <input type="text" placeholder="" class="patientID" name="provider"> <br>
+					
+					<!--
 					Email Address: <input type="text" placeholder="" class="patientID" pattern="\w+@\w+" name="email_address"> <br>
-
-					Height (in): <input type="number" class="patientAttributes" name="height">
-
-					Weight (lbs): <input type="number" class="patientAttributes" name="weight">
+					-->
+				
 				</fieldset>
 				
 				<fieldset>

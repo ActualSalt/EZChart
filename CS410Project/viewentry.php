@@ -20,26 +20,44 @@
 				<tr>
 					<th>Firstname</th>
 					<th>Lastname</th> 
+					<th>Sex</th>
 					<th>Age</th>
-					<th>Entry Date</th>
 					<th>Weight (lbs)</th>
-					<th># of Behaviors</th>
+					<th>Blood Pressure</th>
+					<th>Breakfast</th>
+					<th>Lunch</th>
+					<th>Dinner</th>
+					<th>Behaviors</th>
+					<th>Comments</th>
+					<th>Entry Date</th>
 				</tr>
 				<tr>
 					<td>Jill</td>
 					<td>Smith</td> 
+					<td>Female</td>
 					<td>50</td>
+					<td>150</td>
+					<td>120/80</td>
+					<td>Yes</td>
+					<td>Yes</td> 
+					<td>Yes</td>
+					<td>Swore at staff</td>
+					<td>None</td>
 					<td>10/27/2017</td>
-					<td>150</td>
-					<td>3</td>
 				</tr>
 				<tr>
 					<td>Jill</td>
 					<td>Smith</td> 
+					<td>Female</td>
 					<td>50</td>
-					<td>10/26/2017</td>
 					<td>150</td>
-					<td>5</td>
+					<td>120/80</td>
+					<td>Yes</td>
+					<td>Yes</td> 
+					<td>Yes</td>
+					<td>Swore at staff</td>
+					<td>None</td>
+					<td>10/27/2017</td>
 				</tr>
 			</table>
 		</main>
