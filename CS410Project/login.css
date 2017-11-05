@@ -19,6 +19,11 @@ input[type=text], input[type=password] {
   font-size: 32px;
   font-style: italic;
 } 
+#smalltitle {
+    font-size: 24px;
+    font-style: bold;
+    font-style: italic;
+}
 
 
 /* Set a style for all buttons */
@@ -60,7 +65,9 @@ span.psw {
     float: right;
     padding-top: 16px;
 }
-
+span.register {
+    float: right;
+}
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
