@@ -20,7 +20,7 @@
 	}
 
 	//SQL query 
-	$sql = "SELECT * FROM EZChart.Employee WHERE E_ID='xXSlayerXx'";
+	$sql = "SELECT * FROM EZChart.Employee WHERE E_ID='$username'";
 	$result = $con->query($sql);
 	$row = $result->fetch_assoc();
 	//close
