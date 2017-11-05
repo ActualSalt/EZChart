@@ -1,15 +1,32 @@
 <?php
-	//$dbc = mysqli_connect('localhost', 'data_base_user_name', 'data_base_password', 'EZChart') or die('Error connecting to MySQL server.');
-	//$username = $_GET["username"];
-	//$result = $db->prepare("SELECT * FROM user WHERE user_type = $username");
-	//$patients = array("Billy");  //Demo code needs to be replaced from database
+	$username = $_POST["username"];
+	
+	//Constant declaration
+	$servername = "localhost";
+	$dbusername = "root";
+	$dbpassword = "";
+	$dbname = "EZChart";
+	
+	//Connection
+	$con = mysqli_connect($servername, $dbusername, $dbpassword);
 
+	//Was a connection made?
+	if(!$con){
+		echo 'Not connected';
+	}
+	//Was DB selected?
+	if(!mysqli_select_db($con, $dbname)){
+		echo 'DB Not selected';
+	}
 
-	//this is only to see if I'm connecting to the db
-	//$query = "Insert INTO employee (EmployeeID, Password, Title, Name) VALUES ('0004', '34d832', 'CNA', 'Amy')";
-	//$result = mysqli_query($dbc, $query) or die('Error querying database.');
+	//SQL query 
+	$sql = "SELECT * FROM EZChart.Employee WHERE E_ID='xXSlayerXx'";
+	$result = $con->query($sql);
+	$row = $result->fetch_assoc();
+	//close
+	//$con->close();
+	
 
-	//mysqli_close($dbc);
 
 ?>
 
@@ -23,9 +40,25 @@
 	</head>
 	<body>
 		<header>
-			<h1>Welcome:  <?php print $username ?></h1>
+			<h2>
+				Welcome, 
+				<?php 
+					$sup = $row["FName"]." ".$row["LName"];
+					echo $sup."<br>";		
+				?>
+			</h2>
 		</header>
-		
+
+		Logged in as 
+		<?php
+			$sup = $row["E_ID"];
+			echo "<b>".$sup."<br></b>";
+			$sup = $row["Title"];
+			echo " Title: ".$sup;
+		?>
+
+
+
 		<main>
 			<form>
 				<button type="submit" name="newPatient" formaction="newpatient.php">Add New Patient</button>
