@@ -1,5 +1,6 @@
 <?php
 	$username = $_POST["username"];
+	$password = $_POST["psw"];
 	
 	//Constant declaration
 	$servername = "localhost";
@@ -25,9 +26,22 @@
 	$row = $result->fetch_assoc();
 	//close
 	//$con->close();
-	
+	//Assign ID and Password  
+	$checkID = $row["E_ID"];
+	$checkPass = $row["Password"];
 
+	//Check if ID is there
+	if($checkID!=null){
+		//Check if password is correct
+		if($checkPass!=$password){
+			//Wrong password
+			header('Location: index.html');    
+		}else{
 
+		}	
+	}else{
+
+	}
 ?>
 
 <!DOCTYPE html>
