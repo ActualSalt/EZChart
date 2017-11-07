@@ -17,15 +17,15 @@
 		
 		<main>
 			<div id="PatientNewInfoForm" class="container">
-			<form>
+			<form action="new_patient_added.php" method="Post" enctype="multipart/form-data">
 				<fieldset>
 					<legend>Patient info:</legend>
-					<img id="patientphoto" src="No_picture_available.png" alt="No picture available">
+					<!-- <img id="patientphoto" src="No_picture_available.png" alt="No picture available"> -->
 					First name: <input type="text" class="patientID" name="fname"><br>
 					Last name: <input type="text" class="patientID" name="lname"><br>
-					Date of Birth: <input type="text" placeholder="mm/dd/yyyy" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" maxlength="10" class="patientIDDOBSSN"><br>
+					Date of Birth: <input type="text" placeholder="mm/dd/yyyy" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" maxlength="10" class="patientIDDOBSSN" name="dob"><br>
 					Sex:  
-					<select name="patient">
+					<select name="sex">
 						<option value="male">Male</option>
 						<option value="female">Female</option>
 						<option value="other">Other</option>
@@ -61,6 +61,8 @@
 					-->
 					
 					Insurance: <input type="text" placeholder="" class="patientID" name="provider"> <br>
+
+					Patient Photo: <input type="file" name="pic"> <br>
 					
 					<!--
 					Email Address: <input type="text" placeholder="" class="patientID" pattern="\w+@\w+" name="email_address"> <br>
