@@ -5,8 +5,8 @@
 include "my_login_info.php";
 $dbc = mysqli_connect('localhost', $db_name, $db_password, 'EZChart2') or die('Error connecting to database.');
 
-$first_name = $_POST['fname']; echo #first_name;
-$last_name = $_POST['lname'];
+$first_name = $_POST['npFName']; 
+$last_name = $_POST['npLName'];
 $sex = $_POST['sex']; 
 $height = $_POST['height'];
 $weight = $_POST['weight'];
@@ -18,6 +18,21 @@ $title = $_POST['title'];
 $charter = 'Jessica'; //temp. this value comes from whoever is logged in
 $dob = $_POST['dob'];
 $pic = $_FILES['pic']['name'];
+
+//move uploaded file to Image folder - this works, but people may have to change settings on folders
+//to make sure everything can be written to (that is, that the file is not read only)
+define('GW_UPLOADPATH', 'Images/');
+$target = GW_UPLOADPATH . $pic;
+if(move_uploaded_file($_FILES['pic']['tmp_name'], $target)){
+	echo "way to go!";
+}else{
+	echo "something went wrong moving file";
+}
+
+
+
+echo 'Here is some more debugging info:';
+    print_r($_FILES);
 
 
 //echo "first name is: $first_name ";
@@ -54,3 +69,5 @@ if(!$result) { //this does the actual query to db
 mysqli_close($dbc);
 
 ?>
+
+<?php phpinfo(); ?>

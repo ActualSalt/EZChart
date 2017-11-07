@@ -21,8 +21,8 @@
 				<fieldset>
 					<legend>Patient info:</legend>
 					<!-- <img id="patientphoto" src="No_picture_available.png" alt="No picture available"> -->
-					First name: <input type="text" class="patientID" name="fname"><br>
-					Last name: <input type="text" class="patientID" name="lname"><br>
+					First name: <input type="text" class="patientID" name="npFName"><br>
+					Last name: <input type="text" class="patientID" name="npLName"><br>
 					Date of Birth: <input type="text" placeholder="mm/dd/yyyy" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" maxlength="10" class="patientIDDOBSSN" name="dob"><br>
 					Sex:  
 					<select name="sex">
@@ -80,8 +80,8 @@
 						<option value="rn">RN</option>
 						<option value="dr">Dr.</option>
 					</select><br>
-					First name: <input type="text" class="chartEntererID" name="fname"><br>
-					Last name: <input type="text" class="chartEntererID" name="lname"><br>
+					First name: <input type="text" class="chartEntererID" name="empFName"><br>
+					Last name: <input type="text" class="chartEntererID" name="empLName"><br>
 				</fieldset><br>
 				<input type="submit" id="Submit" value="Submit">
 			</form>
