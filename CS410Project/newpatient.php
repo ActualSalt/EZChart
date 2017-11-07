@@ -30,7 +30,8 @@
 						<option value="female">Female</option>
 						<option value="other">Other</option>
 					</select>
-					Age: <input type="number" class="patientAttributes" min="0" max="125" name="age"><br>
+					<!--Age: <input type="number" class="patientAttributes" min="0" max="125" name="age"><br> -->
+					<br>
 					<br>
 					
 					Height (in): <input type="number" class="patientAttributes" name="height">
@@ -39,6 +40,7 @@
 					
 					<br><br>
 					
+					<!-- no column in database for this info 
 					Marital Status: 
 					<select name="patient">
 						<option value="Married">Married</option>
@@ -46,7 +48,7 @@
 						<option value="Divorced">Divorced</option>
 						<option value="Widowed">Widowed</option>
 						<option value="Other">Other</option>
-					</select> <br><br>
+					</select> <br><br> -->
 
 					SSN: <input type="password" placeholder="#########" class="patientIDDOBSSN" pattern="\d\d\d\d\d\d\d\d\d" maxlength="9" name="ssn"> <br>
 

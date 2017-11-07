@@ -23,16 +23,16 @@ $pic = $_FILES['pic']['name'];
 //echo "first name is: $first_name ";
 //echo "last name is: $last_name ";
 //echo "dob: $birthdate ";
-echo "sex: $sex ";
+//echo "sex: $sex ";
 //echo "height: $height ";
 //echo "weight: $weight ";
 //echo "marriage: $marriage";
 //echo "title: $title";
 //echo "dnr: $dnr_status ";
 //echo "notes: $admission_notes";
-echo "dob: $dob";
-echo "photo: $pic";
-echo "type: $type";
+//echo "dob: $dob";
+//echo "photo: $pic";
+//echo "type: $type";
 
 
 //test string for new db - works
@@ -41,7 +41,9 @@ echo "type: $type";
 //	'304', '000112222', 'Red Cross')";
 
 
-//$query = "INSERT INTO patient_info(first_name, last_name, sex, date_of_birth, weight, dnr_status, admission_notes, image, height) VALUES('$first_name', '$last_name', '$sex', '$birthdate', '$weight', '$dnr_status', '$admission_notes', 'not avaliable', '$height')";
+$query = "INSERT INTO Patient(E_ID, P_ID, Charter, FName, LName, DOB, Sex, Height, Weight, Pic, RoomNumber, SSN,
+	Insurance) VALUES('0', '0', '$charter', '$first_name', '$last_name', '$dob', '$sex', '$height', '$weight', '$pic', 
+	'$roomNumber', '$SSN', '$Insurance')";
 
 $result = mysqli_query($dbc, $query); // or die('Error querying database.');
 if(!$result) { //this does the actual query to db
