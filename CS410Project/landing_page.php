@@ -29,6 +29,7 @@
 	//Assign ID and Password  
 	$checkID = $row["E_ID"];
 	$checkPass = $row["Password"];
+	$title = $row["Title"];
 
 	//Check if ID is there
 	if($checkID!=null){
@@ -40,7 +41,8 @@
 
 		}	
 	}else{
-
+		//Invalid ID 
+		header('Location: index.php'); 
 	}
 ?>
 
@@ -65,16 +67,18 @@
 
 		Logged in as 
 		<?php
-			$sup = $row["E_ID"];
+			$sup = $checkID;
 			echo "<b>".$sup."<br></b>";
-			$sup = $row["Title"];
+			$sup = $title;
 			echo " Title: ".$sup;
 		?>
 
 
 
 		<main>
-			<form>
+			<form method="post">
+				<input type="hidden" name="username" value=<?php echo "$username";?>>
+				<input type="hidden" name="title" value=<?php echo "$title";?>>
 				<button type="submit" name="newPatient" formaction="newpatient.php">Add New Patient</button>
 				<button type="submit" name="newEntry" formaction="patient.php">Add/View Entry</button>
 			</form>
