@@ -39,14 +39,16 @@
 
 					<button type="submit">Register</button>
 				</div>
-
+			</form>
+			<form action="index.php">
 				<div class="container">
-					<button type="button" class="cancelbtn" formaction="index.php">Cancel</button>
+					<button type="submit" class="cancelbtn" formaction="index.php">Cancel</button>
 				</div>
+			</form>
 				<div id="Logo" class="logocontainer">
 					<img src="logofinal.png" alt="Logo for Medical System" style="width:100px;height:100px;">
 				</div>
-			</form>
+
 		</main>
 	</body>
 </html>
