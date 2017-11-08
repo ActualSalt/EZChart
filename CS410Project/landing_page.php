@@ -36,7 +36,7 @@
 		//Check if password is correct
 		if($checkPass!=$password){
 			//Wrong password
-			header('Location: index.html');    
+			header('Location: index.php');    
 		}else{
 
 		}	

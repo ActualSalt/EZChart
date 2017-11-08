@@ -1,5 +1,5 @@
 <?php
-
+	$username = $_POST["username"];
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +18,8 @@
 		<main>
 			<div id="PatientNewInfoForm" class="container">
 			<form action="new_patient_added.php" method="Post" enctype="multipart/form-data">
+			<input type="hidden" name="username" value=<?php echo "$username";?>>
+
 				<fieldset>
 					<legend>Patient info:</legend>
 					<!-- <img id="patientphoto" src="No_picture_available.png" alt="No picture available"> -->
