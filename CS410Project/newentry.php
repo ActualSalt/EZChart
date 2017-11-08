@@ -17,7 +17,7 @@
 		
 		<main>
 			<div id="PatientInfoForm" class="container">
-			<form>
+			<form action='patient.php'>
 				<fieldset>
 					<legend>Patient info:</legend>
 					First name: <input type="text" class="patientID" name="fname"><br>

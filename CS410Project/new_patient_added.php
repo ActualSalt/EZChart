@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>New Patient Added</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="newpatient.css">
+		<script src=".js" type="text/javascript"></script>
+	</head>
+	<form>
+		<button type="submit" formaction="landing_page.php">Home</button>
+	</form>
+<html>
+
+
 <?php 
 
 //this page is just temporary and will be merged with newpatient.php
@@ -68,6 +82,9 @@ if(!$result) { //this does the actual query to db
 }
 mysqli_close($dbc);
 
+
+
 ?>
+
 
 <?php phpinfo(); ?>
