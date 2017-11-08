@@ -41,7 +41,7 @@
 				</div>
 
 				<div class="container">
-					<button type="button" class="cancelbtn">Cancel</button>
+					<button type="button" class="cancelbtn" formaction="index.php">Cancel</button>
 				</div>
 				<div id="Logo" class="logocontainer">
 					<img src="logofinal.png" alt="Logo for Medical System" style="width:100px;height:100px;">
