@@ -17,7 +17,7 @@
 //this page is just temporary and will be merged with newpatient.php
 
 include "my_login_info.php";
-$dbc = mysqli_connect('localhost', $db_name, $db_password, 'EZChart2') or die('Error connecting to database.');
+$dbc = mysqli_connect('localhost', $db_login_name, $db_password, $db_name) or die('Error connecting to database.');
 
 $first_name = $_POST['npFName']; 
 $last_name = $_POST['npLName'];
@@ -27,7 +27,7 @@ $weight = $_POST['weight'];
 $roomNumber = $_POST['address'];
 $SSN = $_POST['ssn'];
 $Insurance = $_POST['provider'];
-$marriage = $_POST['patient'];
+//$marriage = $_POST['patient'];
 $title = $_POST['title'];
 $charter = 'Jessica'; //temp. this value comes from whoever is logged in
 $dob = $_POST['dob'];
@@ -45,8 +45,8 @@ if(move_uploaded_file($_FILES['pic']['tmp_name'], $target)){
 
 
 
-echo 'Here is some more debugging info:';
-    print_r($_FILES);
+//echo 'Here is some more debugging info:';
+    //print_r($_FILES);
 
 
 //echo "first name is: $first_name ";
@@ -65,12 +65,12 @@ echo 'Here is some more debugging info:';
 
 
 //test string for new db - works
-//$query = "INSERT INTO Patient(E_ID, P_ID, Charter, FName, LName, DOB, Sex, Height, Weight, Pic, RoomNumber, SSN,
-//	Insurance) VALUES('0', '003', 'Jessica', 'Nick', 'Anderson', '02-21-1943', 'm', '70', '198', 'none for now',
+//$query = "INSERT INTO Patient(P_ID, Charter, FName, LName, DOB, Sex, Height, Weight, Pic, RoomNumber, SSN,
+//	Insurance) VALUES('003', 'Jessica', 'Nick', 'Anderson', '02-21-1943', 'm', '70', '198', 'none for now',
 //	'304', '000112222', 'Red Cross')";
 
 
-$query = "INSERT INTO Patient(E_ID, P_ID, Charter, FName, LName, DOB, Sex, Height, Weight, Pic, RoomNumber, SSN,
+$query = "INSERT INTO Patient(P_ID, Charter, FName, LName, DOB, Sex, Height, Weight, Pic, RoomNumber, SSN,
 	Insurance) VALUES('0', '$charter', '$first_name', '$last_name', '$dob', '$sex', '$height', '$weight', '$pic', 
 	'$roomNumber', '$SSN', '$Insurance')";
 
