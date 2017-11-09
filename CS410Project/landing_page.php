@@ -4,9 +4,13 @@
 	
 	//Constant declaration
 	$servername = "localhost";
-	$dbusername = "root";
-	$dbpassword = "";
-	$dbname = "EZChart";
+	//$dbusername = "root";
+	//$dbpassword = "";
+	//$dbname = "EZChart";
+
+	$dbusername = $db_login_name;
+	$dbpassword = $db_password;
+	$dbname = $db_name;
 	
 	//Connection
 	$con = mysqli_connect($servername, $dbusername, $dbpassword);
@@ -21,7 +25,7 @@
 	}
 
 	//SQL query 
-	$sql = "SELECT * FROM EZChart.Employee WHERE E_ID='$username'";
+	$sql = "SELECT * FROM $dbname.Employee WHERE E_ID='$username'";
 	$result = $con->query($sql);
 	$row = $result->fetch_assoc();
 	//close

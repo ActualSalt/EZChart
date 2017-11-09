@@ -27,7 +27,6 @@ $weight = $_POST['weight'];
 $roomNumber = $_POST['address'];
 $SSN = $_POST['ssn'];
 $Insurance = $_POST['provider'];
-//$marriage = $_POST['patient'];
 $title = $_POST['title'];
 $charter = 'Jessica'; //temp. this value comes from whoever is logged in
 $dob = $_POST['dob'];
