@@ -16,8 +16,8 @@
 
 //this page is just temporary and will be merged with newpatient.php
 
-include "my_login_info.php";
-$dbc = mysqli_connect('localhost', $db_login_name, $db_password, $db_name) or die('Error connecting to database.');
+//include "my_login_info.php";
+$dbc = mysqli_connect('localhost', 'root', '', 'ezchart') or die('Error connecting to database.');
 
 $first_name = $_POST['npFName']; 
 $last_name = $_POST['npLName'];
