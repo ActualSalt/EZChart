@@ -71,7 +71,7 @@ echo 'Here is some more debugging info:';
 
 
 $query = "INSERT INTO Patient(E_ID, P_ID, Charter, FName, LName, DOB, Sex, Height, Weight, Pic, RoomNumber, SSN,
-	Insurance) VALUES('0', '0', '$charter', '$first_name', '$last_name', '$dob', '$sex', '$height', '$weight', '$pic', 
+	Insurance) VALUES('0', '$charter', '$first_name', '$last_name', '$dob', '$sex', '$height', '$weight', '$pic', 
 	'$roomNumber', '$SSN', '$Insurance')";
 
 $result = mysqli_query($dbc, $query); // or die('Error querying database.');
