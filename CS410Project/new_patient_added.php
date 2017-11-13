@@ -1,5 +1,14 @@
 <?php
 	$username = $_POST["username"];
+	include "my_login_info.php";
+	$con = mysqli_connect($servername, $db_login_name, $db_password, $db_name) or die('Error connecting to database.');
+	//SQL query 
+	$sql = "SELECT * FROM EZChart.Employee WHERE E_ID='$username'";
+	$result = $con->query($sql);
+	$row = $result->fetch_assoc();
+	//Password  
+	$password = $row["Password"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,14 +20,12 @@
 	</head>
 	<form method="post">
 		<input type="hidden" name="username" value=<?php echo "$username";?>>
+		<input type="hidden" name="psw" value=<?php echo "$password";?>>
 		<button type="submit" name="Home" formaction="landing_page.php">Go Home</button>
 	</form>
 <html>
 
 <?php 
-include "my_login_info.php";
-$con = mysqli_connect($servername, $db_login_name, $db_password, $db_name) or die('Error connecting to database.');
-
 $first_name = $_POST['npFName']; 
 $last_name = $_POST['npLName'];
 $dob = $_POST['dob'];
