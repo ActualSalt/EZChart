@@ -1,5 +1,6 @@
 <?php
-
+    $fName = $_POST["first"];
+    $lName = $_POST["last"];
 ?>
 
 <!DOCTYPE html>
@@ -48,8 +49,10 @@
 						<option value="rn">RN</option>
 						<option value="dr">Dr.</option>
 					</select><br><br>
-					First name: <input type="text" class="chartEntererID" name="fname"><br>
-					Last name: <input type="text" class="chartEntererID" name="lname"><br>
+					First name: <input type="text" class="chartEntererID" name="fname" value=<?php echo $fName; ?>>
+                    <br>
+					Last name: <input type="text" class="chartEntererID" name="lname" value=<?php echo $lName; ?>>
+                    <br>
 				</fieldset><br>
 				<input type="submit" id="Submit" value="Submit">
 			</form>

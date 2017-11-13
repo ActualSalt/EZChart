@@ -1,16 +1,16 @@
 <?php
 	$username = $_POST["username"];
 	$password = $_POST["psw"];
-	
+
 	//Constant declaration
 	$servername = "localhost";
 	//$dbusername = "root";
 	//$dbpassword = "";
 	//$dbname = "EZChart";
 
-	$dbusername = $db_login_name;
-	$dbpassword = $db_password;
-	$dbname = $db_name;
+	$dbusername = 'root';
+	$dbpassword = '';
+	$dbname = 'EZChart';
 	
 	//Connection
 	$con = mysqli_connect($servername, $dbusername, $dbpassword);
@@ -34,6 +34,8 @@
 	$checkID = $row["E_ID"];
 	$checkPass = $row["Password"];
 	$title = $row["Title"];
+    $fName = $row["FName"];
+    $lName = $row["LName"];
 
 	//Check if ID is there
 	if($checkID!=null){
@@ -81,8 +83,9 @@
 
 		<main>
 			<form method="post">
-				<input type="hidden" name="username" value=<?php echo "$username";?>>
-				<input type="hidden" name="title" value=<?php echo "$title";?>>
+                <input type="hidden" name="username" value=<?php echo $username; ?>>
+				<input type="hidden" name="first" value=<?php echo $fName;?>>
+				<input type="hidden" name="last" value=<?php echo $lName;?>>
 				<button type="submit" name="newPatient" formaction="newpatient.php">Add New Patient</button>
 				<button type="submit" name="newEntry" formaction="patient.php">Add/View Entry</button>
 			</form>
