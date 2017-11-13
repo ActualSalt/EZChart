@@ -83,6 +83,7 @@
 
 		<main>
 			<form method="post">
+                <input type="hidden" name="username" value=<?php echo $username; ?>>
 				<input type="hidden" name="first" value=<?php echo $fName;?>>
 				<input type="hidden" name="last" value=<?php echo $lName;?>>
 				<button type="submit" name="newPatient" formaction="newpatient.php">Add New Patient</button>
