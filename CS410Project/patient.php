@@ -7,7 +7,12 @@
     ?>
         <p>Sorry, a database error occurred. Please try again later.</p>
         <p>(Error details: <?= $ex->getMessage() ?>)</p>
-  <?php } ?>
+  <?php } 
+
+    $fName = $_POST["first"];
+    $lName = $_POST["last"];
+    
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +28,7 @@
 		</header>
 		
 		<main>
-			<form>
+			<form method="post">
 				Select a patient:
 				<select name="patient">
 					<?php foreach($patients as $patient)
@@ -31,6 +36,8 @@
 						<option value="<?php $patient ?>"><?php print $patient ?></option><?php ;
 					} ?>
 				</select>
+                <input type="hidden" name="first" value=<?php echo $fName;?>>
+                <input type="hidden" name="last" value=<?php echo $lName;?>>
 				<button type="submit" name="newEntry" formaction="newentry.php">New Entry</button>
 				<button type="submit" name="viewEntry" formaction="viewentry.php">View Entry</button>
 			</form>
