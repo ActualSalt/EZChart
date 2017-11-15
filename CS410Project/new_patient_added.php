@@ -8,7 +8,31 @@
 	$row = $result->fetch_assoc();
 	//Password  
 	$password = $row["Password"];
-
+	//Patient ID Generator
+	//Random 
+	$digits = 5;
+	$random = rand(pow(10, $digits-1), pow(10, $digits)-1);
+	//Check 
+	$sql = "SELECT * FROM EZChart.Patient WHERE P_ID='$random'";
+	$result = $con->query($sql);
+	$row = $result->fetch_assoc();
+	$P_ID_Check = $row["P_ID"];
+	if($P_ID_Check==null){
+		$Patient_ID = $random;
+	}else{
+		$isAvail = true;
+		while($isAvail){
+			$random = rand(pow(10, $digits-1), pow(10, $digits)-1);
+			$sql = "SELECT * FROM EZChart.Patient WHERE P_ID='$random'";
+			$result = $con->query($sql);
+			$row = $result->fetch_assoc();
+			$P_ID_Check = $row["P_ID"];
+			if(P_ID_Check==null){
+				$isAvail = false;
+				$Patient_ID = $random;
+			}
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,23 +62,8 @@ $Insurance = $_POST['provider'];
 $charter = $username;
 $pic = $_FILES['pic']['name'];
 
-//move uploaded file to Image folder - this works, but people may have to change settings on folders
-//to make sure everything can be written to (that is, that the file is not read only)
-
-
-/*
-if(move_uploaded_file($_FILES['pic']['tmp_name'], $target)){
-	echo "way to go!";
-}else{
-	echo "something went wrong moving file";
-}
-*/
-
-$qry = "INSERT INTO EZChart.Patient (`E_ID`, `P_ID`, `Charter`, `FName`, `LName`, `DOB`, `Sex`, `Height`, `Weight`, `Pic`, `RoomNumber`, `SSN`, `Insurance`, `TimeStamp`) VALUES (NULL, '', '$username', '$first_name', '$last_name', '$dob', '$sex', '$height', '$weight', '$pic', '$roomNumber', '$SSN', '$Insurance', CURRENT_TIMESTAMP)";
+$qry = "INSERT INTO EZChart.Patient (`E_ID`, `P_ID`, `Charter`, `FName`, `LName`, `DOB`, `Sex`, `Height`, `Weight`, `Pic`, `RoomNumber`, `SSN`, `Insurance`, `TimeStamp`) VALUES (NULL, '$Patient_ID', '$username', '$first_name', '$last_name', '$dob', '$sex', '$height', '$weight', '$pic', '$roomNumber', '$SSN', '$Insurance', CURRENT_TIMESTAMP)";
 $result = $con->query($qry);
-
 mysqli_close($con);
 ?>
-
-
 <?php //phpinfo(); ?>
