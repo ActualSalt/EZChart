@@ -1,5 +1,8 @@
 <?php
-
+	$username = $_POST["username"];
+	$P_ID = $_POST["PID"];
+	include "my_login_info.php";
+	$con = mysqli_connect($servername, $db_login_name, $db_password, $db_name) or die('Error connecting to database.');
 ?>
 
 <!DOCTYPE html>
@@ -12,54 +15,16 @@
 	</head>
 	<body>
 		<header>
-			<h1>Patient data for:  Smith, Jill:</h1>
-		</header>
 		
+		</header>
 		<main>
-			<table style="width:100%">
-				<tr>
-					<th>Firstname</th>
-					<th>Lastname</th> 
-					<th>Sex</th>
-					<th>Age</th>
-					<th>Weight (lbs)</th>
-					<th>Blood Pressure</th>
-					<th>Breakfast</th>
-					<th>Lunch</th>
-					<th>Dinner</th>
-					<th>Behaviors</th>
-					<th>Comments</th>
-					<th>Entry Date</th>
-				</tr>
-				<tr>
-					<td>Jill</td>
-					<td>Smith</td> 
-					<td>Female</td>
-					<td>50</td>
-					<td>150</td>
-					<td>120/80</td>
-					<td>Yes</td>
-					<td>Yes</td> 
-					<td>Yes</td>
-					<td>Swore at staff</td>
-					<td>None</td>
-					<td>10/27/2017</td>
-				</tr>
-				<tr>
-					<td>Jill</td>
-					<td>Smith</td> 
-					<td>Female</td>
-					<td>50</td>
-					<td>150</td>
-					<td>120/80</td>
-					<td>Yes</td>
-					<td>Yes</td> 
-					<td>Yes</td>
-					<td>Swore at staff</td>
-					<td>None</td>
-					<td>10/27/2017</td>
-				</tr>
-			</table>
+			<form method="post">
+				<h2>ID: <?php echo "$P_ID";?></h2>
+
+				<input type="hidden" name="username" value=<?php echo "$username";?>>
+				<button type="submit" name="goBack" formaction="patient.php">Go Back</button>
+				<button type="submit" name="newEntry" formaction="newentry.php">New Entry</button>
+			</form>
 		</main>
 	</body>
 </html>

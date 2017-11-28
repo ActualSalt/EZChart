@@ -1,6 +1,5 @@
 <?php
-    $fName = $_POST["first"];
-    $lName = $_POST["last"];
+$username = $_POST["username"];
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +17,7 @@
 		
 		<main>
 			<div id="PatientInfoForm" class="container">
-			<form action='patient.php'>
+			<form method="post" action='patient.php'>
 				<fieldset>
 					<legend>Patient info:</legend>
 					First name: <input type="text" class="patientID" name="fname"><br>
@@ -39,22 +38,10 @@
 					Dinner:<input id="dinner" type="checkbox"><br><br>
 					<textarea rows="4" cols="50" placeholder="Enter behaviors here." name="behaviors"></textarea>
 					<textarea rows="4" cols="50" placeholder="Additional Comments." name="comments"></textarea>
-				</fieldset>
-				
-				<fieldset>
-					<legend>Chart Enterer:</legend>
-					Title:  
-					<select name="title">
-						<option value="cna">CNA</option>
-						<option value="rn">RN</option>
-						<option value="dr">Dr.</option>
-					</select><br><br>
-					First name: <input type="text" class="chartEntererID" name="fname" value=<?php echo $fName; ?>>
-                    <br>
-					Last name: <input type="text" class="chartEntererID" name="lname" value=<?php echo $lName; ?>>
-                    <br>
-				</fieldset><br>
+					<br>
+				<input type="hidden" name="username" value=<?php echo "$username";?>>
 				<input type="submit" id="Submit" value="Submit">
+				<button type="submit" id="Submit" name="goBack" formaction="patient.php">Go Back</button>
 			</form>
 			</div>
 		</main>
