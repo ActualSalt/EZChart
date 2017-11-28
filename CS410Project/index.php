@@ -36,7 +36,6 @@
 
 				<div class="container">
 					<button type="button" class="cancelbtn">Cancel</button>
-					<span class="psw">Forgot <a href="#">password?</a></span>
 				</div>
 				<div class="container">
 					<span class="register">Need an account? Register <a href="register.php">here</a></span>

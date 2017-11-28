@@ -75,18 +75,6 @@
 					-->
 				
 				</fieldset>
-				
-				<fieldset>
-					<legend>Chart Enterer:</legend>
-					Title:  
-					<select name="title">
-						<option value="cna">CNA</option>
-						<option value="rn">RN</option>
-						<option value="dr">Dr.</option>
-					</select><br>
-					First name: <input type="text" class="chartEntererID" name="empFName" value=<?php echo $fName; ?>><br>
-					Last name: <input type="text" class="chartEntererID" name="empLName" value=<?php echo $lName; ?>><br>
-				</fieldset><br>
 				<input type="submit" id="Submit" value="Submit">
 			</form>
 			</div>
