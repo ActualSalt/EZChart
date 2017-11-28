@@ -1,7 +1,5 @@
 <?php
 	$username = $_POST["username"];
-    $fName = $_POST["first"];
-    $lName = $_POST["last"];
 ?>
 
 <!DOCTYPE html>
