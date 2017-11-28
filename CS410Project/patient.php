@@ -11,8 +11,6 @@
 	$long = "150";
 	$medium = "100";
 	$short = "35";
-    $fName = $_POST["first"];
-    $lName = $_POST["last"];
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +20,19 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="login.css">
 		<script src=".js" type="text/javascript"></script>
+		<style>
+			.pButton {
+				background-color: #ccffcc; /* Green */
+   				border: none;
+			    color: black;
+			    padding: 5px 5px; ;
+			    text-align: center;
+			    text-decoration: none;
+			    font-size: 13px;
+			    margin: -5px;
+			    cursor: pointer;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -31,10 +42,7 @@
 			<form method="post">
 				Patient List<br> 
 				<input type="hidden" name="username" value=<?php echo "$username";?>>
-                <input type="hidden" name="first" value=<?php echo "$fName";?>>
-                <input type="hidden" name="last" value=<?php echo "$lName";?>>
 				<input type="hidden" name="psw" value=<?php echo "$password";?>>
-				<button type="submit" name="newEntry" formaction="newentry.php">New Entry</button>
 				<button type="submit" name="newEntry" formaction="landing_page.php">Main Menu</button>
 	<!--Table begins-->
 	<table cellspacing="10" cellpadding="0" border="0" width="100%">
@@ -62,23 +70,28 @@
 	$result = $con->query($sql);
 ?> 
  <?php while ($row = $result->fetch_array()):?>
-	     <tr>
-	        <td width=<?php echo "$medium"?>><?php echo $row["P_ID"];?></td>
-	        <td width=<?php echo "$long"?>><?php echo $row["FName"];?></td>
-	        <td width=<?php echo "$long"?>><?php echo $row["LName"];?></td>
-	        <td width=<?php echo "$short"?>><?php echo $row["RoomNumber"];?></td>
-	        <td width=<?php echo "$long"?>><?php echo $row["Charter"];?></td>
-	        <td width=<?php echo "$long"?>><?php echo $row["TimeStamp"];?></td>
-	    </tr>
+ 	<form method="post">
+     <tr>
+     	<input type="hidden" name="username" value=<?php echo "$username";?>>
+     	<input type="hidden" name="PID" value=<?php echo $row["P_ID"];?>>
+
+        <td width=<?php echo "$medium"?>>
+        	<button type="submit" name="pButt" class="pButton"
+        	 formaction="viewentry.php"><?php echo $row["P_ID"];?></button>
+        </td>
+        <td width=<?php echo "$long"?>><?php echo $row["FName"];?></td>
+        <td width=<?php echo "$long"?>><?php echo $row["LName"];?></td>
+	    <td width=<?php echo "$short"?>><?php echo $row["RoomNumber"];?></td>
+	    <td width=<?php echo "$long"?>><?php echo $row["Charter"];?></td>
+	    <td width=<?php echo "$long"?>><?php echo $row["TimeStamp"];?></td>
+	</tr>
+	</form>
 <?php endwhile;?>
 	     </table>  
 	   </div>
 	  </td>
 	 </tr>
 	</table>
-
-<?php
-?>	
 			</form>
 		</main>
 	</body>
