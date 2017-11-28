@@ -15,6 +15,8 @@ $con = mysqli_connect($servername, $db_login_name, $db_password, $db_name) or di
 	$checkID = $row["E_ID"];
 	$checkPass = $row["Password"];
 	$title = $row["Title"];
+    $name = $row["FName"];
+    $Lname = $row["LName"];
 
 	//Check if ID is there
 	if($checkID!=null){
@@ -63,6 +65,8 @@ $con = mysqli_connect($servername, $db_login_name, $db_password, $db_name) or di
 		<main>
 			<form method="post">
 				<input type="hidden" name="username" value=<?php echo "$username";?>>
+                <input type="hidden" name="first" value=<?php echo "$name";?>>
+                <input type="hidden" name="last" value=<?php echo "$Lname";?>>
 				<input type="hidden" name="title" value=<?php echo "$title";?>>
 				<button type="submit" name="newPatient" formaction="newpatient.php">Add New Patient</button>
 				<button type="submit" name="newEntry" formaction="patient.php">Add/View Entry</button>
