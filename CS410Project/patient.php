@@ -40,7 +40,7 @@
 		</header>
 		<main>
 			<form method="post">
-				Patient List<br> 
+				<br><b> &nbsp;  &nbsp; Patient List</b> 
 				<input type="hidden" name="username" value=<?php echo "$username";?>>
 				<input type="hidden" name="psw" value=<?php echo "$password";?>>
 				<button type="submit" name="newEntry" formaction="landing_page.php">Main Menu</button>
