@@ -11,6 +11,8 @@
 	$long = "150";
 	$medium = "100";
 	$short = "35";
+    $fName = $_POST["first"];
+    $lName = $_POST["last"];
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +31,8 @@
 			<form method="post">
 				Patient List<br> 
 				<input type="hidden" name="username" value=<?php echo "$username";?>>
+                <input type="hidden" name="first" value=<?php echo "$fname";?>>
+                <input type="hidden" name="last" value=<?php echo "$lname";?>>
 				<input type="hidden" name="psw" value=<?php echo "$password";?>>
 				<button type="submit" name="newEntry" formaction="newentry.php">New Entry</button>
 				<button type="submit" name="newEntry" formaction="landing_page.php">Main Menu</button>
