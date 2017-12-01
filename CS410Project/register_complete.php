@@ -1,31 +1,16 @@
 <?php
 	$username = $_POST["username"];
+	$password = $_POST["password"];
 	$fname = $_POST["fname"];
 	$lname = $_POST["lname"];
 	$title = $_POST["title"];
-	$password = $_POST["password"];
-	
-	//Constant declaration
-	$servername = "localhost";
-	$dbusername = "root";
-	$dbpassword = "";
-	$dbname = "EZChart";
-	
-	//Connection
-	$con = mysqli_connect($servername, $dbusername, $dbpassword);
 
-	//Was a connection made?
-	if(!$con){
-		echo 'Not connected';
-	}
-	//Was DB selected?
-	if(!mysqli_select_db($con, $dbname)){
-		echo 'DB Not selected';
-	}
+	include "my_login_info.php";
+	$con = mysqli_connect($servername, $db_login_name, $db_password, $db_name) or die('Error connecting to database.');
 
 	//SQL query 
 	//Check if ID is taken 
-	$sql = "SELECT * FROM EZChart.Employee WHERE E_ID='$username'";
+	$sql = "SELECT * FROM $db_name.Employee WHERE E_ID='$username'";
 	$result = $con->query($sql);
 	$row = $result->fetch_assoc();
 	$checkID = $row["E_ID"];

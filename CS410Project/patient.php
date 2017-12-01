@@ -3,7 +3,7 @@
 	include "my_login_info.php";
 	$con = mysqli_connect($servername, $db_login_name, $db_password, $db_name) or die('Error connecting to database.');
 	//SQL query 
-	$pass = "SELECT * FROM EZChart.Employee WHERE E_ID='$username'";
+	$pass = "SELECT * FROM $db_name.Employee WHERE E_ID='$username'";
 	$result = $con->query($pass);
 	$getPass = $result->fetch_assoc();
 	//Password  
@@ -66,7 +66,7 @@
 	     <table cellspacing="0" cellpadding="10" border="1" width="100%" >
 <?php
 	//Table output 
-	$sql = "SELECT * FROM EZChart.Patient";
+	$sql = "SELECT * FROM $db_name.Patient";
 	$result = $con->query($sql);
 ?> 
  <?php while ($row = $result->fetch_array()):?>

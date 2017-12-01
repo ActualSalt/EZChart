@@ -6,7 +6,7 @@ include "my_login_info.php";
 $con = mysqli_connect($servername, $db_login_name, $db_password, $db_name) or die('Error connecting to database.');
 
 	//SQL query 
-	$sql = "SELECT * FROM EZChart.Employee WHERE E_ID='$username'";
+	$sql = "SELECT * FROM $db_name.Employee WHERE E_ID='$username'";
 	$result = $con->query($sql);
 	$row = $result->fetch_assoc();
 	//close
